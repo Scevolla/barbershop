@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Барбершоп "Бородинский"</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="inner-page">
+
+	<header class="main-header">
+		<div class="container clearfix">
+
+			<nav class="main-navigation">
+				<a href="index.html" class="header-logo-link">
+					<img src="img/header-logo.png" alt='Барбершоп "Бородинский"'>
+				</a>
+				<ul class="ul-reset"><!--
+				--><li><a href="#">Информация</a></li><!--
+				--><li><a href="#">Новости</a></li><!--
+				--><li><a class="active-page" href="#">Прайс-лист</a></li><!--
+				--><li><a href="shop.html">Магазин</a></li><!--
+				--><li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+
+			<div class="user-block">
+				<a href="#" id="login-link-id" class="login-link">Вход</a>
+			</div>
+		</div>
+	</header>
+
+
+	<main class="inner-main container">
+		<h1 class="inner-main-title">Прайс-лист</h1>
+		
+		<ul class="ul-reset clearfix breadcrumbs">
+			<li><a href="index.html">Главная</a></li>
+			<li><span class="breadcrumbs-current">Прайс-лист</span></li>
+		</ul>
+
+		<div class="pricelist-content clearfix">
+			<div class="pricelist-content-title-wrap">
+				<h2 class="pricelist-content-title">Истинно мужская классика</h2>
+			</div>
+			
+			<div class="pricelist-sub-content clearfix">
+				<div class="pricelist-content-left-col">
+					<h3>Мы используем только<br>лучшие средства:</h3>
+					<ul class="best-resources-list ul-reset">
+						<li class="custom-li">Baxter of California</li>
+						<li class="custom-li">Mr Natty</li>
+						<li class="custom-li">Suavecito</li>
+						<li class="custom-li">Malin+Goetz</li>
+					</ul>
+				</div>
+
+				<div class="pricelist-content-right-col">
+					<h3>Цены на услуги<br>наших мастеров:</h3>
+					<table class="prices-table">
+						<tr>
+							<td>Стрижка</td>
+							<td> 1500 р.</td>
+						</tr>
+						<tr>
+							<td>Стрижка бороды</td>
+							<td>500 р.</td>
+						</tr>
+						<tr>
+							<td>Накрутка усов</td>
+							<td>350 р.</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<h3>Несколько слов о нас:</h3>
+
+			<div class="pricelist-sub-content">
+				<div class="pricelist-content-left-col">
+					<p class="about-descr">Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+				</div>
+
+				<div class="pricelist-content-right-col">
+					<p class="about-descr">Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<footer class="main-footer">
+		<div class="container clearfix">
+
+			<section class="footer-contacts">
+				Барбершоп «Бородинский»<br>
+				Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+				<a id="footer-map-link-id" href="#">Как нас найти?</a><br>
+				Телефон: +7 (495) 666-02-66
+			</section>
+
+			<section class="footer-social">
+				<p>Давайте дружить!</p>
+				<a href="#" class="btn social-btn-vk">Вконтакте</a><!--
+			--><a href="#" class="btn social-btn-fb">Фейсбук</a><!--
+			--><a href="#" class="btn social-btn-in">Инстаграм</a>
+			</section>
+
+			<section class="footer-copyright">
+				<p>Разработано:</p>
+				<a class="btn" href="https://htmlacademy.ru">HTMLAcademy.ru</a>
+			</section>
+		</div>
+	</footer>
+
+
+	<div class="hidden-blocks">
+
+		<div id="popup-login-id" class="popup-login">
+			<div id='popup-login-close-id' class="popup-close-btn"></div>
+			<h2>Личный кабинет</h2>
+			<p>Введите пожалуйста свой логин и пароль</p>
+			<form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+				<input type="text" name="login" value="" placeholder="Логин"><!--
+			--><input type="password" name="password" value="" placeholder="Пароль">
+				<label class="label-checkbox">
+					<input type="checkbox" name="remember" checked>
+					<span class="custom-checkbox"></span>Запомните меня
+				</label>
+				<a href="#" class="forget-link">Я забыл пароль!</a>
+				<button class="btn" type="submit">Войти</button>
+			</form>
+		</div>
+
+		<div id="viewport-overlay-id" class="viewport-overlay"></div>
+
+		<div id="popup-map-id" class="popup-map">
+			<div id='popup-map-close-id'  class="popup-close-btn"></div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616043102!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1479194027640" width="764" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

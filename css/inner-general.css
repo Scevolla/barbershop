@@ -1,0 +1,101 @@
+.inner-page {
+	color: #000;
+	background: #fff url(../img/bg-index-content.gif);
+}
+
+.inner-page .main-footer {
+	background: 
+		url(../img/footer-gradient.png) repeat-x 0 0,
+		url(../img/bg-index-footer.jpg) #222;
+}
+
+.inner-page .header-logo-link {
+	display: block;
+	float: left;
+	padding: 24px 20px;
+	cursor: pointer;
+}
+
+.header-logo-link img {
+	display: block;
+}
+
+.main-header .active-page {
+	position: relative;
+}
+
+.main-header .active-page::after {
+	content: '';
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: 0;
+	height: 4px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.inner-main {
+	padding-top: 55px;
+}
+
+.inner-main a {
+	color: #000;
+}
+
+.inner-main-title {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 30px;
+	line-height: 36px;
+}
+
+.breadcrumbs {
+	line-height: 14px;
+	margin-bottom: 57px;
+}
+
+.breadcrumbs li {
+	position: relative;
+	float: left;
+	padding-right: 40px;
+}
+
+.breadcrumbs li::after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	right: 16px;
+	width: 8px;
+	height: 8px;
+	transform: rotate(45deg);
+	background-color: #000;
+}
+
+.breadcrumbs li:last-child::after {
+	content: none;
+}
+
+.breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumbs .breadcrumbs-current {
+	color: #aba9a7;
+}
+
+.price-buy-block .price {
+	display: block;
+	float: left;
+	width: 108px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	background-color: #e5e5e5;
+}
+
+.price-buy-block .buy-btn {
+	float: right;
+	width: 80px;
+	color: #fff;
+}

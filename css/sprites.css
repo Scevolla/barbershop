@@ -1,0 +1,59 @@
+.sprite {
+    background-image: url(sprite.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-fb {
+    width: 12px;
+    height: 22px;
+    background-position: -5px -5px;
+}
+
+.sprite-icon-fb-hover {
+    width: 12px;
+    height: 22px;
+    background-position: -5px -37px;
+}
+
+.sprite-icon-in {
+    width: 21px;
+    height: 21px;
+    background-position: -5px -69px;
+}
+
+.sprite-icon-in-hover {
+    width: 21px;
+    height: 21px;
+    background-position: -5px -100px;
+}
+
+.sprite-icon-login {
+    width: 18px;
+    height: 16px;
+    background-position: -5px -131px;
+}
+
+.sprite-icon-user-name {
+    width: 15px;
+    height: 15px;
+    background-position: -5px -157px;
+}
+
+.sprite-icon-user-password {
+    width: 15px;
+    height: 17px;
+    background-position: -5px -182px;
+}
+
+.sprite-icon-vk {
+    width: 25px;
+    height: 16px;
+    background-position: -5px -209px;
+}
+
+.sprite-icon-vk-hover {
+    width: 25px;
+    height: 16px;
+    background-position: -5px -235px;
+}

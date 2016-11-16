@@ -1,0 +1,166 @@
+.index-page {
+	color: #fff;
+	background: #000 url(../img/bg-index-body.jpg) no-repeat center top;
+}
+
+.index-main {
+	padding-top: 57px;
+}
+
+.index-logo {
+	margin-bottom: 25px;
+}
+
+.index-logo img {
+	display: block;
+	width: 368px;
+	height: 204px;
+	margin: 0 auto;
+}
+
+.features {
+	margin-bottom: 80px;
+}
+
+.features-item {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.features-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.features-item .feature-name {
+	position: relative;
+	display: block;
+	font-size: 30px;
+	line-height: 36px;
+	padding-bottom: 40px;
+	margin-bottom: 30px;
+}
+
+.features-item .feature-name::after {
+	content: '';
+	position: absolute;
+	top: 55px;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+	transform: rotate(45deg);
+	background-color: #fff;
+}
+
+.features-item .feature-descr {
+	margin: 0;
+	padding: 0 10px;
+}
+
+.index-content {
+	padding: 47px 80px 54px;
+	margin-bottom: 34px;
+	color: #000;
+	background: 		 
+		url(../img/bg-index-content-sep.png) no-repeat center center,
+		url(../img/bg-index-content.gif) #fff;
+}
+
+.index-content-left {
+	float: left;
+	width: 330px;
+}
+
+.index-content-right {
+	float: right;
+	width: 300px;
+}
+
+.index-content p {
+	margin: 20px 0 24px 0;
+}
+
+.index-content-title {
+	margin-top: 0;
+	margin-bottom: 28px;
+	font-size: 30px;
+	line-height: 36px;
+}
+
+.news-preview li{
+	margin-bottom: 23px;
+}
+
+.news-preview p{
+	margin: 0;
+	padding-right: 20px;
+}
+
+.news-preview time{
+	font-weight: normal;
+	text-transform: none;
+}
+
+.index-content .btn {
+	min-width: 140px;
+}
+
+.news-btn {
+	margin-top: 8px;
+}
+
+.gallery {
+	position: relative;
+	width: 300px;
+	height: 258px;
+	margin-top: 35px;
+}
+
+.gallery-content {
+	margin: 0;
+	padding: 0;
+	border: 7px solid #fff;
+	background-color: #bbb;
+}
+
+.gallery-content img {
+	display: block;
+}
+
+.gallery .btn {
+	position: absolute;
+	bottom: 0;
+}
+
+.gallery-prev {
+	left: 0;
+}
+
+.gallery-next {
+	right: 0;
+}
+
+.index-adress-block .btn {
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.appointment-form input {
+	float: left;
+	width: 111px;
+	margin-right: 20px;
+	margin-bottom: 19px;
+}
+
+.appointment-form input:nth-child(2n) {
+	margin-right: 0;
+}
+
+.appointment-form .btn {
+	clear: both;
+	width: 100%;
+	margin-top: 15px;
+}
+

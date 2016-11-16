@@ -1,0 +1,124 @@
+.shop-form {
+	float: left;
+	width: 210px;
+}
+
+.shop-form fieldset {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.shop-form legend {
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 27px;
+}
+
+.shop-form .label-checkbox {
+	line-height: 20px;
+	padding-left: 44px;
+	margin-bottom: 17px;
+}
+
+.shop-form .label-checkbox:last-child {
+	margin-bottom: 50px;
+}
+
+.shop-form .btn {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.shop-content-right-col {
+	float: right;
+	width: 700px;
+}
+
+.shop-goods {
+	font-size: 0;
+	margin-right: -20px;
+}
+
+.shop-goods-item {
+	font-size: 14px;
+}
+
+.shop-goods-item {
+	display: inline-block;
+	width: 220px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+.shop-goods-item .good-img-link {
+	position: relative;
+	display: block;
+}
+
+.shop-goods-item .good-img-link::after {
+	content: '';
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.shop-goods-item .good-img-link:hover::after {
+	display: block;
+}
+
+.shop-goods-item img {
+	display: block;
+	max-width: 220px;
+	max-height: 165px;
+	margin: 0 auto;
+}
+
+.shop-goods-item .link {
+	display: block;
+	line-height: 18px;
+}
+
+.shop-goods-item .link:hover {
+	text-decoration: underline;
+}
+
+.shop-goods-item .good-info-wrap {
+	padding: 14px 16px 16px;
+}
+
+.shop-goods-item .goods-group-link {
+	text-transform: none;
+}
+
+.shop-goods-item .manufacturer-link {
+	margin-bottom: 14px;
+}
+
+.shop-pagination {
+	margin-top: 25px;
+}
+
+.shop-pagination li {
+	float: left;	
+	margin-right: 7px;
+}
+
+.shop-pagination .btn {
+	color: #fff;
+	width: 44px;
+}
+
+.shop-pagination .active {
+	background-color: #fff;
+	color: #000;
+	cursor: default;
+}
