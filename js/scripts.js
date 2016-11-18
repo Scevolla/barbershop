@@ -3,29 +3,78 @@
 // Popup Login form
 ////////////////////////////////////////////
 
-var loginLink = document.querySelector('#login-link-id'),
-	 popupLogin = document.querySelector('#popup-login-id'),
-	 popupLoginClose = document.querySelector('#popup-login-close-id'),
-	 popupLoginInput = popupLogin.querySelector('input[name="login"]'),
-	 viewportOverlay = document.querySelector('#viewport-overlay-id');
+var loginLink 				= document.querySelector('#login-link-id'),
+	 popupLogin 			= document.querySelector('#popup-login-id'),
+	 popupLoginClose 		= popupLogin.querySelector('#popup-login-close-id'),
+	 popupLoginForm		= popupLogin.querySelector('.login-form'),
+	 popupLoginUser 		= popupLogin.querySelector('input[name="login"]'),
+	 popupLoginPassword 	= popupLogin.querySelector('input[name="password"]'),
+	 viewportOverlay 		= document.querySelector('#viewport-overlay-id'),
+	 usernameStorage		= localStorage.getItem('username');
 
-loginLink.addEventListener('click', function() {
-	viewportOverlay.style.display = 'block';
-	popupLogin.style.display = 'block';
-	popupLoginInput.focus();
+loginLink.addEventListener('click', function(event) {
+	event.preventDefault();
+	viewportOverlay.classList.add('viewport-overlay-show');
+	popupLogin.classList.add('popup-login-display');
+	popupLogin.classList.add('popup-login-show');
+
+	if (usernameStorage) {
+		popupLoginUser.value = usernameStorage;
+		popupLoginPassword.focus();
+	}
+	else {
+		popupLoginUser.focus();
+	}
+});
+
+popupLoginForm.addEventListener('submit', function(event) {
+	popupLogin.classList.remove('popup-login-show');
+	if (!popupLoginUser.value || !popupLoginPassword.value) {
+		event.preventDefault();
+		popupLogin.classList.add('popup-login-error');
+		if (!popupLoginUser.value)
+			popupLoginUser.focus();
+		else if (!popupLoginPassword.value) {
+			popupLoginPassword.focus();
+		}
+		setTimeout(function() {
+			popupLogin.classList.remove('popup-login-error');
+		}, 500);
+	}
+	else {
+		localStorage.setItem('username', popupLoginUser.value);
+		closeLoginPopup();
+	}
 });
 
 popupLoginClose.addEventListener('click', function() {
-	viewportOverlay.style.display = 'none';
-	popupLogin.style.display = 'none';	
+	closeLoginPopup();
 });
+
+window.addEventListener('keydown', function(event) {
+	if (event.keyCode === 27) {
+		if (popupLogin.classList.contains('popup-login-show')) 
+			closeLoginPopup();
+	} 
+
+	if (event.keyCode === 81) {
+		viewportOverlay.classList.toggle('viewport-overlay-show2');
+	} 
+});
+
+function closeLoginPopup() {
+	viewportOverlay.classList.remove('viewport-overlay-show');
+	popupLogin.classList.remove('popup-login-display');
+	popupLogin.classList.remove('popup-login-show');
+	popupLogin.classList.remove('popup-login-error');
+}
 
 // Popup interactive google map
 /////////////////////////////////
 
-var popupMap = document.querySelector('#popup-map-id'),
-	 popupMapClose = popupMap.querySelector('#popup-map-close-id'),
-	 footerMapLink = document.querySelector('#footer-map-link-id'),
+var popupMap 				= document.querySelector('#popup-map-id'),
+	 popupMapClose 		= popupMap.querySelector('#popup-map-close-id'),
+	 footerMapLink 		= document.querySelector('#footer-map-link-id'),
 	 indexContentMapLink = document.querySelector('#index-content-map-link-id');
 
 footerMapLink.addEventListener('click', showPopupMap);
@@ -34,12 +83,12 @@ if (indexContentMapLink)
 
 function showPopupMap(event) {
 	event.preventDefault();
-	viewportOverlay.style.display = 'block';
+	viewportOverlay.classList.add('viewport-overlay-show');
 	popupMap.style.display = 'block';
 };
 
 popupMapClose.addEventListener('click', function() {
-	viewportOverlay.style.display = 'none';
+	viewportOverlay.classList.remove('viewport-overlay-show');
 	popupMap.style.display = 'none';	
 });
 
@@ -47,7 +96,7 @@ popupMapClose.addEventListener('click', function() {
 /////////////////////////////////
 
 var productThumbs = document.querySelectorAll('#product-thumbs-id a');
-	 productImg = document.querySelector('#product-img-id');
+	 productImg 	= document.querySelector('#product-img-id');
 
 if (productThumbs) {
 	for (var i = 0; i < productThumbs.length; ++i) {
@@ -62,10 +111,10 @@ if (productThumbs) {
 // Photo gallery on Index page
 ///////////////////////////////////////////
 
-var btnNext = document.querySelector('#index-next-btn-id');
-	 btnPrev = document.querySelector('#index-prev-btn-id');
-	 galleryImg = document.querySelector('#index-gallery-photo-id');
-	 photoCount = 3;
+var btnNext 		= document.querySelector('#index-next-btn-id');
+	 btnPrev 		= document.querySelector('#index-prev-btn-id');
+	 galleryImg 	= document.querySelector('#index-gallery-photo-id');
+	 photoCount 	= 3;
 	 curPhotoIndex = 1;
 
 if (btnNext && btnPrev && galleryImg) {

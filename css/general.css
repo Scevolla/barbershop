@@ -156,15 +156,22 @@ input[type="radio"] {
 /*///////////////////////////  POPUPS  ////////////////////*/
 
 .viewport-overlay {
-	display: none;
-	content: '';
-	position: fixed;
-	z-index: 10;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.6);
+    display: block;
+    content: '';
+    position: fixed;
+    z-index: 10;
+    top: -10000;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.6);
+    transition: opacity 0.6s;
+}
+
+.viewport-overlay-show {   
+    top: 0;
+    opacity: 1;
 }
 
 .popup-close-btn {
@@ -174,11 +181,6 @@ input[type="radio"] {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
-	transition: all 0.3s;
-}
-
-.popup-close-btn:hover {
-	transform: rotate(90deg);
 }
 
 .popup-close-btn::before,
@@ -190,6 +192,7 @@ input[type="radio"] {
 	width: 26px;
 	height: 5px;
 	background-color: #d1d1d1;
+	transition: all 0.3s;
 }
 
 .popup-close-btn::before {
@@ -198,6 +201,14 @@ input[type="radio"] {
 
 .popup-close-btn::after {
 	transform: rotate(-45deg);
+}
+
+.popup-close-btn:hover::before {
+    transform: rotate(135deg);
+}
+
+.popup-close-btn:hover::after {
+    transform: rotate(45deg);
 }
 
 .popup-login {
@@ -215,6 +226,37 @@ input[type="radio"] {
 	-webkit-box-shadow: 0px 30px 60px 0px rgba(0,0,0,0.7);
 	-moz-box-shadow: 0px 30px 60px 0px rgba(0,0,0,0.7);
 	box-shadow: 0px 30px 60px 0px rgba(0,0,0,0.7);
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(-2000px); }
+    70%  { transform: translateY(30px); }
+    90%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.popup-login-display {
+    display: block;
+}
+
+.popup-login-show {   
+    -webkit-animation: bounce 0.6s;
+    -o-animation: bounce 0.6s;
+    -moz-animation: bounce 0.6s;
+    animation: bounce 0.6s;
+}
+
+@keyframes shake {
+   0%, 100%                 { transform: translateX(0); }
+   20%, 60%  { transform: translateX(-10px); }
+   40%, 80%       { transform: translateX(10px); }
+}
+
+.popup-login-error {
+   -webkit-animation: shake 0.4s;
+   -o-animation: shake 0.4s;
+   -moz-animation: shake 0.4s;
+   animation: shake 0.4s;
 }
 
 .popup-login h2 {
